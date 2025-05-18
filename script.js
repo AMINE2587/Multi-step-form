@@ -138,15 +138,14 @@ function planSelected(){
 };
 
 function getData(){
-    if(localStorage.planInfo != null
-    )
-    {
-        let get = localStorage.getItem('info', JSON.parse(planInfo));
-        
-        result.innerHTML = get.plan;
-    }else{
-        return;
-    }
+   let planInfo = localStorage.getItem('planInfo');
+
+if (planInfo !== null) {
+    let get = JSON.parse(planInfo);
+    result.innerHTML = get.plan;
+} else {
+    return;
+}
 }
 
 
