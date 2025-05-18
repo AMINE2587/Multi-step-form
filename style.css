@@ -1,0 +1,369 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+    background: #eef5ff;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 10px;
+    width: 800px;
+    height: 500px;
+    border-radius: 15px;
+    background: #fefffe;
+}
+.img-contain{
+    width: 30%;
+    padding: 10px;
+    background: url(images/bg-sidebar-desktop.svg);
+    border-radius: 10px;
+    background-size: cover;
+    color: white;
+}
+.steps-info{
+    height: 100%;
+}
+.contain{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 30px;
+    height: 15%;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.contain .steps{
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    flex-direction: column;
+    
+}
+.contain span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    padding: 5px;
+    border: 1px solid white;
+    color: white;
+}
+
+.steps p{
+    color: silver;
+
+}
+.steps h3{
+    font-size: 16px;
+}
+.personal-info{
+    padding: 15px;
+    background: white;
+}
+.title-info{
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+.title-info h2{
+    color: #233e63;
+}
+.title-info p{
+    color: silver;
+    font-size: 14px;
+}
+.inputs{
+    margin-top: 30px;
+}
+.inp{
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 5px;
+    padding: 10px;
+}
+.inp label{
+    font-size: 13px;
+    color: #233e63;
+}
+.inp input{
+    padding: 8px;
+    width: 90%;
+    border: silver solid 1.5px;
+    background: none;
+    border-radius: 10px;
+    transition: border 0.4s ease-in-out;
+    color: #233e63;
+}
+.inp input::placeholder{
+    color: gray;
+}
+.inp input:focus{
+    border: #233e63 solid 1.5px;
+    outline: none;
+}
+.next-btn{
+    height: 10vh;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+    padding: 10px;
+    margin-right: 25px;
+
+}
+.next-btn button{
+    border: none;
+    padding: 10px;
+    font-size: 12px;
+    color: white;
+    background: #072757;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.select-plan{
+    padding: 10px;
+    width: 60%;
+}
+.plans{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 25vh;
+    padding: 10px;
+    margin-top: 30px;
+    margin-left: -20px;
+}
+.plan{
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    align-content: start;
+    flex-direction: column;
+    gap: 35px;
+    background: none;
+    height: 20vh;
+    width: 8vw;
+    padding: 15px;
+    border-radius: 15px;
+    border: silver 1.5px solid;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    
+    
+}
+.plan:hover{
+    border: #072757 solid 1.5px;
+}
+.plan .plan-info h3{
+    font-size: 16px;
+    color: #072757;
+}
+.plan .plan-info p{
+    color: silver;
+    font-size: 13px;
+}
+.type{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+.type select{
+    width: 100%;
+    padding: 8px;
+    background: #ecf4ff;
+    color: #072757;
+    border-radius: 10px;
+    margin-left: -15px;
+    border: #072757 solid 1.5px;
+    transition: all 0.4s ease-in-out;
+}
+.type select:focus{
+   outline: none;
+   border: #65a5ff 1.5px solid;
+}
+.active{
+    background: #ecf4ff;
+    border: #072757 solid 1.5px;
+}
+.des{
+    border: silver 1.5px solid;
+    background: none;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+    padding: 10px;
+    width: 32vw;
+    margin-left: 10px;
+}
+.buttons .back{
+    position: relative;
+    background: none;
+    color: silver;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+.buttons .back::after{
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    content: '';
+    width: 0;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    background: #072757;
+    color: #072757;
+
+}
+.buttons .back:hover::after{
+    width: 100%;
+}
+.buttons .next{
+    border: none;
+    padding: 10px;
+    font-size: 12px;
+    color: white;
+    background: #072757;
+    border-radius: 7px;
+    cursor: pointer;
+    width: 25%;
+}
+.add-ons{
+    padding: 10px;
+    width: 60%;
+}
+.picks{
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 10px;
+    margin-left: -10px;
+}
+.pick{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f2f8ff;
+    width: 95%;
+    margin-top: 20px;
+    height: 8vh;
+    padding: 5px;
+    border-radius: 7px;
+    border: #072757 solid 1px;
+}
+.check{
+    padding: 10px;
+}
+
+.pick-info{
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    flex-direction: column;
+    gap: 5px;
+    width: 70%;
+}
+.pick-info h4{
+    color: #072757;
+    font-size: 15px;
+}
+.pick-info p{
+    color: rgb(139, 139, 139);
+    font-size: 12px;
+}
+.pick-price p{
+    color: #65a5ff;
+    font-size: 13px;
+}
+.double-check{
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.chose-again{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    width: 100%;
+    padding: 10px;
+}
+.plan-chosing{
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    flex-direction: column;
+    gap:5px;
+    width: 100%;
+    padding: 10px;
+     
+}
+.plan-chosing select{
+    background: none;
+    border: none;
+}
+
+.plan-chosing select:hover{
+    border-bottom: 2px #072757 solid;
+    cursor: pointer;
+}
+.plan-chosing select:focus{
+    outline: none;
+}
+.chose-price p{
+    font-size: 14px;
+}
+.chose-again p{
+    color: silver;
+    font-size: 14px;
+}
+.chose-again span{
+    font-size: 13px;
+}
+.chose-type{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+.chose-type p{
+    color: silver;
+    font-size: 13px;
+    padding: 5px;
+}
+.chose-type h4{
+    color: #65a5ff;
+}
+.finishing-up{
+    padding: 10px;
+    width: 60%;
+    margin-right: 20px;
+}
