@@ -7,16 +7,26 @@ let fullName = document.getElementById('name');
 let email = document.getElementById('email');
 let phoneNumber = document.getElementById('phone');
 
+
+
+
 let firstDisplay = document.getElementById('personal-info');
 let secondDisplay = document.getElementById('select-plan');
 let thirdDisplay = document.getElementById('add-ons');
 let forDisplay = document.getElementById('finishing-up');
 let result = document.getElementById('place-change');
+let finalDisplay = document.getElementById('thanks');
+
 
 let back1 = document.getElementById('back');
 
 
+let step1 = document.getElementById('sp1');
+let step2 = document.getElementById('sp2');
+let step3 = document.getElementById('sp3');
+let step4 = document.getElementById('sp4');
 
+let confirmBtn = document.getElementById('confirm');
 
 
 
@@ -47,6 +57,8 @@ function saveData(){
         localStorage.setItem('info', JSON.stringify(userInfo));
         firstDisplay.style.display = 'none';
         secondDisplay.style.display = 'block';
+        step1.style.background = 'none';
+        step2.style.background = '#bddffb';
        }else{
         alert("please complete the informations")
        };
@@ -106,6 +118,8 @@ function planSelected(){
 
      secondDisplay.style.display = 'none';
      thirdDisplay.style.display = 'block';
+     step2.style.background = 'none';
+     step3.style.background = '#bddffb';
 
      }else if(type.value !== "" &&
        plan2.style.background != 'none'){
@@ -118,6 +132,8 @@ function planSelected(){
          localStorage.setItem('planInfo', JSON.stringify(planInformations));
          secondDisplay.style.display = 'none';
          thirdDisplay.style.display = 'block';
+         step2.style.background = 'none';
+         step3.style.background = '#bddffb';
 
      } else if(type.value !== "" &&
        plan3.style.background != 'none'
@@ -130,6 +146,8 @@ function planSelected(){
          localStorage.setItem('planInfo', JSON.stringify(planInformations));
          secondDisplay.style.display = 'none';
          thirdDisplay.style.display = 'block';
+         step2.style.background = 'none';
+         step3.style.background = '#bddffb';
        }else{
         alert('please complete the informations');
        };
@@ -173,6 +191,8 @@ function addOns(){
         localStorage.setItem('onsInfo', JSON.stringify(onsInfo));
         thirdDisplay.style.display = 'none';
         forDisplay.style.display = 'block';
+        step3.style.background = 'none';
+        step4.style.background = '#bddffb';
         
      }else if(checkTwo.hasAttribute('checked')){
         let ons = {
@@ -182,6 +202,8 @@ function addOns(){
         localStorage.setItem('onsInfo', JSON.stringify(onsInfo));
         thirdDisplay.style.display = 'none';
         forDisplay.style.display = 'block';
+        step3.style.background = 'none';
+        step4.style.background = '#bddffb';
      }else if(checkThird.hasAttribute('checked')){
         let ons = {
             type: 'Customizable Profile',
@@ -189,7 +211,9 @@ function addOns(){
         onsInfo.push(ons);
         localStorage.setItem('onsInfo', JSON.stringify(onsInfo));
         thirdDisplay.style.display = 'none';
-        forDisplay.style.display = 'none';
+        forDisplay.style.display = 'block';
+        step3.style.background = 'none';
+        step4.style.background = '#bddffb';
      }else if(checkOne.hasAttribute('checked') &&
               checkTwo.hasAttribute('checked') &&
               checkThird.hasAttribute('checked')
@@ -202,6 +226,8 @@ function addOns(){
                 localStorage.setItem('onsInfo', JSON.stringify(onsInfo));
                 thirdDisplay.style.display = 'none';
                 forDisplay.style.display = 'block';
+                step3.style.background = 'none';
+                step4.style.background = '#bddffb';
                }
                else{
                  alert('please chose');
@@ -228,17 +254,33 @@ nextBtn1.addEventListener('click', function(){
 function backFisrt(){
     firstDisplay.style.display = 'block';
     secondDisplay.style.display = 'none';
+    step1.style.background = '#bddffb';
+    step2.style.background = 'none';
 }
 function backSecond(){
     thirdDisplay.style.display = 'none';
     secondDisplay.style.display = 'block';
+    step3.style.background = 'none';
+    step2.style.background = '#bddffb';
 }
 function backThird(){
     forDisplay.style.display = 'none';
     thirdDisplay.style.display = 'block';
+    step4.style.background = 'none';
+    step3.style.background = '#bddffb'
 }
 
+function final(){
+    forDisplay.style.display = 'none';
+    finalDisplay.style.display = 'flex';
+}
+
+
 addEventListener('input', chosingAgain);
+
+
+confirmBtn.addEventListener('click', final);
+
 
 chosingAgain();
 selectPlan();
